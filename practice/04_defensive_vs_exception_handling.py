@@ -69,7 +69,7 @@ EXCEPTION HANDLING:
             Helps your program to deal with mistakes without stopping abruptly.
 
         Separates Error Handling from Main Logic:
-            Keeps your main program neat and lets you deal with problems in specific spots.
+            Keeps your main program neat and lets you deal with problems in a separate area of code.
 
         Gives More Control:
             You can decide exactly what to do if an error happens,
