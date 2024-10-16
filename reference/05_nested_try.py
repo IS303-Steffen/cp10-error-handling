@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,20 +12,30 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
-
+# =================
+# NESTED TRY/EXCEPT
+# =================
 
 '''
-    You can nest try/except statements.
+OVERVIEW
+--------
+You can nest try/except statements.
 
-    If a try/except is nested and you encounter an error, it will just go to the corresponsing
-    except statement, but continue on in the outer try statement.
+If a try/except is nested and you encounter an error, it will just
+go to the corresponsing except statement, but continue on in the outer
+try statement.
+
+This is good to know about, but we likely won't get into too many situations
+like this.
 '''
 
+# 1. NESTED TRY / EXCEPT STATEMENTS
 # Look through this, and try to predict what except statements will run.
-# None of these variables have been defined, so they will all trigger exceptions.
+# None of these variables have been defined, so they will all trigger
+# exceptions.
+
+# After running the program once, try creating a value for the variable z
+# and running it again.
 
 import sys 
 

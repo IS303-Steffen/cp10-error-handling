@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,19 +12,21 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
+# =======================
+# LOOPING WITH EXCEPTIONS
+# =======================
 
-
-# Practice:
 '''
-Often, you don't want to terminate the program, you just want it to try again, especially
-in cases where you are gathering inputs.
+OVERVIEW
+--------
+Often, you don't want to terminate the program, you just want it to try again,
+especially in cases where you are gathering inputs.
 
-Alter this code using a while loop so that it will keep asking how for a number of customers to enter
-until a valid integer has been provided.
 '''
+
+# 1. USING TRY/EXCEPT WITH A LOOP
+# Alter this code using a while loop so that it will keep asking how for a
+# number of customers to enter until a valid integer has been provided.
 
 continue_asking = True
 while continue_asking:
@@ -42,3 +46,24 @@ while continue_asking:
         print(f'"{num_cust}" is not a valid number. Use a valid integer (0-9)')
 
 
+# BONUS
+# If you have time, do the same thing as above, but make your own function
+# that gathers input while accounting for ValueErrors and doesen't exit
+# the function until a valid value is provided.
+
+
+def validating_number_input(input_prompt):
+    while True:
+        try:
+            response = input(input_prompt)
+            return int(response)
+
+        except:
+            print(f'"{response}" is not a valid number. Use a valid integer (0-9)')
+
+
+num_cust = validating_number_input("How many customers would you like to enter? ")
+
+#For each customer:
+for count in range(1, num_cust + 1) :
+    print("This is just an example, customer #", count)

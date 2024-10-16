@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,46 +12,47 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
+# =======
+# FINALLY
+# =======
 
 '''
-    Beyond try/except there are 2 other statements. We won't cover them besides here,
-    but it is good to know they exist (especially finally)
+OVERVIEW
+--------
+"Finally" is what you may say when this class ends. It also refers to a 
+statement that is put after the except. finally will always run, no matter
+whether an exception occurred or not.
 
+We will likely not need to use this during the semester. It comes more in handy
+when doing some more complex stuff with connections to external databases, etc
+and you need to make absolutely sure that you securely close connections even
+if an error occurs, etc.
 
-    try:
-        run this code first
-    except:
-        if exception caught, run this
-    else:
-        if no exception, run this code
-    finally:
-        ALWAYS run this code. No matter if there is or is not an exception.
+STRUCTURE
+---------
+try:
+    run this code first
+except:
+    if exception caught, run this
+finally:
+    ALWAYS run this code. No matter if there is or is not an exception.
+
 '''
 
+# 1. FINALLY
+# Run the code below and provide any valid integer. Notice how the finally
+# statement runs. Run the code again and provide an improper input.
+# Notice that the finally statement runs as well.
+
+import sys
 
 try:
     number = int(input("Enter an integer: "))
     result = 10 / number
 except:
     print("That wasn't an integer! Or maybe you divided by zero.")
-else:
-    print(f"10 divided by {number} is {result}")
+    sys.exit()
 finally:
     print("This will always execute, no matter what!")
 
 
-# Why?
-'''
-    else:
-        optional. Your textbook doesn't cover it. Just if you want to logically separate out
-        "this is the code that might have errors" and
-        "this is what I want to do if the above code actually worked"
-
-    finally:
-        useful in some situations where you might have opened up a connection to a database or file
-        and want to be absolutely sure that no matter what error might pop up, you can close the connection,
-        or save some kind of data that you were working with.
-'''

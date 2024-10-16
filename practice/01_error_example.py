@@ -1,8 +1,10 @@
-# optional stuff that will clear the window each time you run it.
 import os
 import platform
 
 def clear_screen():
+    """
+    Clears the terminal screen to make it easier to follow along with code.
+    """
     if platform.system() == 'Windows':
         os.system('cls')
     else:
@@ -10,23 +12,26 @@ def clear_screen():
 
 clear_screen()
 
-###########################
-# START READING HERE
-###########################
-
+# ===================
+# ERRORS & EXCEPTIONS
+# ===================
 
 '''
-Errors / Exceptions:
-    Normally if the program encounters an error, it will just shut down.
-    lots of times, runtime errors are caused by improper inputs. When your code
-    runs into an error that makes it unable to run, it "throws an exception".
-    An exception is just a name for an error that makes the code not run.
-    
-    Exceptions have names, that you can see when running the code and looking at the terminal
-    when an exception is thrown.
+OVERVIEW
+--------
+Normally if the program encounters a runtime error, it will just shut down.
+When your code runs into an error that makes it unable to run,
+it "throws an exception".
+
+An "exception" is an event that immediately disrupts the flow of a program,
+and usually occurs when there is an error in your code. If you don't handle
+and exception, your program will immediately stop running.
+
+Exceptions have names, that you can see when running the code and looking at
+the terminalwhen an exception is thrown.
 '''
 
-# Practice:
+# 1. PURPOSEFULLY CAUSING AN EXCEPTION:
 # Try entering something like "Three" instead of "3" to the below code.
 # What is the name of the exception that is thrown?
 
