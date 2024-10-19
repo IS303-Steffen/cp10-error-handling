@@ -21,14 +21,14 @@ OVERVIEW
 --------
 Normally if the program encounters a runtime error, it will just shut down.
 When your code runs into an error that makes it unable to run,
-it "throws an exception".
+it "raises" an exception (or "throws" an exception, either phrasing works).
 
 An "exception" is an event that immediately disrupts the flow of a program,
 and usually occurs when there is an error in your code. If you don't handle
-and exception, your program will immediately stop running.
+an exception, your program will immediately stop running.
 
 Exceptions have names, that you can see when running the code and looking at
-the terminalwhen an exception is thrown.
+the terminal when an exception is thrown.
 '''
 
 # 1. PURPOSEFULLY CAUSING AN EXCEPTION:
