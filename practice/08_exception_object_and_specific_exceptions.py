@@ -33,7 +33,12 @@ See the bottom of this page for some examples.
 
 
 # 1. USING THE GENERAL EXCEPTION OBJECT
-# Follow along. First add "Exception as e" to the except statement.
+# Follow along. First try running the code with an invalid number, like "asdf"
+# Notice the error message you get. Then try running the code with a valid
+# integer, but one that doesn't exist in the dictionary. Notice the error you
+# get.
+
+# Then, lets add a try/except and add "Exception as e" to the except statement.
 # try printing out type(e).__name__ and also try printing out e directly.
 # Then run the code with an invalid input. What kind of exception was thrown?
 
@@ -41,17 +46,15 @@ See the bottom of this page for some examples.
 # above the first one that specifically mentions the type of exception you want
 # to catch. Feel free to add a more specific version of the message.
 
+student_id_dictionary = {123: "Jimmy Jones",
+                         321: "Alice Alms",
+                         332: "Robert Reed"}
 
-try:
-    num_cust = int(input("\nHow many customers would you like to enter? " ))
 
-    #For each customer:
-    for count in range(1, num_cust + 1) :
-        print("This is just an example, customer #", count)
-
-except:
-    print("Something went wrong")
-
+student_id = int(input("\nEnter a student ID to see their name: " ))
+student_name = student_id_dictionary[student_id]
+print(f"Student ID {student_id} belongs to {student_name}")
+    
 
 
 '''
