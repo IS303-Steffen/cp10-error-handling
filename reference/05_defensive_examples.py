@@ -29,15 +29,14 @@ that you handle it.
 '''
 
 
-# 1. .isdigit() EXAMPLE
-# Print out the result of .isdigit() on both of the provided strings below:
-# Note, you can also use .isdecimal() if you also want to check floats.
+# 1. .isdecimal() EXAMPLE
+# Print out the result of .isdecimal() on both of the provided strings below:
 
 example_string_1 = "not a digit"
 example_string_2 = "123"
 
-print(example_string_1.isdigit())
-print(example_string_2.isdigit())
+print(example_string_1.isdecimal())
+print(example_string_2.isdecimal())
 
 
 # 2. REWRITE TO USE DEFENSIVE PROGRAMMING
@@ -54,7 +53,7 @@ except:
 
 # defensive example
 maybe_a_number = "123" # change this to something non-numeric, see the result
-if maybe_a_number.isdigit():
+if maybe_a_number.isdecimal():
     maybe_a_number = int(maybe_a_number)
     print(f"This is your number + 10: {maybe_a_number + 10}")
 
@@ -62,36 +61,11 @@ else:
     print(f"The variable maybe_a_number was not actually a number.")
 
 
-# 3. REWRITE TO USE DEFENSIVE PROGRAMMING
-# Below you're provided with some example code using exception handling
-# Try to replicate the same thing, but use defensive programming instead.
-
-possible_key = 111
-student_id_dictionary = {123: "Jimmy Jones", 321: "Alice Alms", 332: "Robert Reed"}
-try:
-    student_name = student_id_dictionary[possible_key]
-    print(f"Student ID {possible_key} belongs to {student_name}")
-except:
-    print(f"Student ID {possible_key} doesn't exist.")
-
-
-# defensive example
-possible_key = 111
-student_id_dictionary = {123: "Jimmy Jones", 321: "Alice Alms", 332: "Robert Reed"}
-
-student_name = student_id_dictionary.get(possible_key)
-if student_name: 
-    print(f"Student ID {possible_key} belongs to {student_name}")
-else:
-    print(f"Student ID {possible_key} doesn't exist.")
-
-
-
 '''
 USEFUL CODE FOR DEFENSIVE PROGRAMMING:
 --------------------------------------
 
-.isdigit() .isnumeric()
+.isdecimal() .isdigit() .isnumeric()
     - useful for checking if a string is a number
 
 isinstance(variable, data type)
@@ -102,7 +76,5 @@ isinstance(variable, data type)
 
 len() (when accessing lists)
     - useful when you aren't sure if an index is valid
-
-
 
 '''

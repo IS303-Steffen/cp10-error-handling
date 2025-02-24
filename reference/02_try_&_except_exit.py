@@ -48,7 +48,7 @@ flow:
 
 other stuff we'll get to:
     you can have multiple excepts
-    you can also use and "else" or a "finally" after the except
+    you can also use a "finally" after the except
 
 '''
 

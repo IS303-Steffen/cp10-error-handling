@@ -39,7 +39,7 @@ See the bottom of this page for some examples.
 # get.
 
 # Then, lets add a try/except and add "Exception as e" to the except statement.
-# try printing out type(e).__name__ and also try printing out e directly.
+# try printing out type(e) and also try printing out e directly.
 # Then run the code with an invalid input. What kind of exception was thrown?
 
 # Then after learning what type of exception it is, add a new except statement
